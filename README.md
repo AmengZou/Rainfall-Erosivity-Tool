@@ -1,96 +1,70 @@
-# Rainfall-Erosivity-Tool
-## 🚀 Run this project in Google Colab
+# Rainfall erosivity calculating tool based on IMERG V06 and Machine learning correction
 
-[![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/AmengZou/Rainfall-Erosivity-Tool/blob/main/Rainfall_erosivity_tool_IMERG_V06.ipynb)
-
----
-
-# Rainfall Erosivity Tool (IMERG V06)
-
-This repository provides a workflow to calculate and analyze rainfall erosivity using IMERG precipitation data.
-
-## 📌 Features
-
-* Process IMERG precipitation data
-* Calculate rainfall erosivity (R-factor)
-* Generate spatial maps and figures
-* Export results for GIS applications (e.g., ArcGIS Pro)
+This repository provides a workflow to calculate corrected rainfall erosivity derived from IMERG V06 precipitation data.
 
 ---
 
-## ⚙️ How to Use
+## Authors:
 
-### Option 1 (Recommended): Run in Google Colab
-
-1. Click the **"Open in Colab"** button above
-2. Run all cells
-3. Upload your input data when prompted
-4. Download outputs
-
-👉 No installation required
+<ul style="line-height:1.5;">
+<li>Ameng Zou <a href="mailto:amengzou@arizona.edu">(amengzou@arizona.edu)</a></li>
+<li>Shang Gao <a href="mailto:shanggao@arizona.edu">(shanggao@arizona.edu)</a></li>
+</ul>
 
 ---
 
-### Option 2: Run Locally
+## Affiliation:
 
-Requirements:
-
-* Python 3.10+
-* rasterio
-* geopandas
-* cartopy
-* numpy
-* pandas
-* matplotlib
-
-Install dependencies:
-
-```bash
-pip install -r requirements.txt
-```
+School of Natural Resources and the Environment, University of Arizona, Tucson, AZ, USA
 
 ---
 
-## 📂 Project Structure
+## Purpose:
+
+This notebook provides workflow for calculating rainfall erosivity derived from IMERG precipittation data which makes it available to acquire rainfall erosivity value (R-factor) anywhere globally. For getting more accurate rainfall eorsivity, this notebook also applies a machine learning algorithm to reliably correct the rainfall erosivity value from IMERG V06 precipitation data which helps user to collect high-accuracy rainfall erosivity data. 
+
+---
+
+## Target Audience:
+
+This tool is intended for researchers and practitioners who require high-resolution global rainfall erosivity data and have a working knowledge of Jupyter Notebooks, Python, and basic hydrologic data analysis.
+
+---
+
+## Description:
+
+The notebook takes latitude and longitude coordinates as input and performs the following steps:
+1. Extracts baseline rainfall erosivity derived from IMERG V06 precipitation (Emberson's dataset)  
+2. Retrieves auxiliary predictors from Google Earth Engine (GEE) assets  
+3. Applies a trained machine learning model to estimate the error between satellite-derived and reference (gauge-based) erosivity  
+4. Generates bias-corrected rainfall erosivity estimates  
+5. Exports results as a CSV file and provides visualization outputs  
+
+---
+
+## Data Description:
+
+Original rainfall erosivity data is from Erosivity_IMERGV06B_30min_2001_2021.tif.
+
+---
+
+## Software Requirements:
+
+Please refer to `requirements.txt` for configuring the Python environment and dependencies.
+
+---
+
+## Project Structure
 
 ```text
 Rainfall-Erosivity-Tool/
-│
 ├── Rainfall_erosivity_tool_IMERG_V06.ipynb   # Main notebook
 ├── README.md
 ├── requirements.txt
 ```
-
 ---
 
-## 📊 Outputs
-
-The tool can generate:
-
-* Rainfall erosivity maps
-* Error maps
-* GeoTIFF files for GIS
-* Figures for publication
-
----
-
-## 📎 Notes
-
-* Colab version is recommended to avoid dependency issues (GDAL, rasterio, cartopy)
-* Local execution may require additional system configuration
-
----
-
-## 📧 Contact
-
-For questions or collaboration:
-
-Ameng Zou
-PhD Student, University of Arizona
-
----
-
-## ⭐ Acknowledgement
+## Acknowledgement
 
 If you find this tool useful, please consider citing or starring the repository.
 
