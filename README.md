@@ -1,4 +1,4 @@
-# Rainfall erosivity calculating tool based on IMERG V06 and Machine learning correction
+# Global rainfall erosivity calculating tool based on IMERG V06 and Machine Learning correction
 
 This repository provides a workflow to calculate corrected rainfall erosivity derived from IMERG V06 precipitation data.
 
@@ -61,6 +61,10 @@ Rainfall-Erosivity-Tool/
 ├── Rainfall_erosivity_tool_IMERG_V06.ipynb   # Main notebook
 ├── README.md
 ├── requirements.txt
+├── Erosivity_IMERGV06B_30min_2001_2021.tif
+├── IMERGV06_Erosivity_Error_Prediction_Model.pkl
+├── Inputs.csv
+├── ...
 ```
 ---
 
