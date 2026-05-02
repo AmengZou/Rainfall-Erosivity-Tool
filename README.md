@@ -4,7 +4,7 @@ This repository provides a workflow to calculate corrected rainfall erosivity de
 
 ---
 
-## Authors:
+## Authors
 
 <ul style="line-height:1.5;">
 <li>Ameng Zou <a href="mailto:amengzou@arizona.edu">(amengzou@arizona.edu)</a></li>
@@ -13,25 +13,25 @@ This repository provides a workflow to calculate corrected rainfall erosivity de
 
 ---
 
-## Affiliation:
+## Affiliation
 
 School of Natural Resources and the Environment, University of Arizona, Tucson, AZ, USA
 
 ---
 
-## Purpose:
+## Purpose
 
 This notebook provides workflow for calculating rainfall erosivity derived from IMERG precipittation data which makes it available to acquire rainfall erosivity value (R-factor) anywhere globally. For getting more accurate rainfall eorsivity, this notebook also applies a machine learning algorithm to reliably correct the rainfall erosivity value from IMERG V06 precipitation data which helps user to collect high-accuracy rainfall erosivity data. 
 
 ---
 
-## Target Audience:
+## Target Audience
 
 This tool is intended for researchers and practitioners who require high-resolution global rainfall erosivity data and have a working knowledge of Jupyter Notebooks, Python, and basic hydrologic data analysis.
 
 ---
 
-## Description:
+## Description
 
 The notebook takes latitude and longitude coordinates as input and performs the following steps:
 1. Extracts baseline rainfall erosivity derived from IMERG V06 precipitation (Emberson's dataset)  
@@ -42,13 +42,7 @@ The notebook takes latitude and longitude coordinates as input and performs the 
 
 ---
 
-## Data Description:
-
-Original rainfall erosivity data is from Erosivity_IMERGV06B_30min_2001_2021.tif.
-
----
-
-## Software Requirements:
+## Software Requirements
 
 Please refer to `requirements.txt` for configuring the Python environment and dependencies.
 
